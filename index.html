@@ -10,22 +10,59 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
         <link rel="stylesheet" href="./style.css">
     </head>
-  <body>
+  <body style="margin-left:5%;margin-right:10%;">
+    <header class="navbar d-flex justify-content-left py-3 pull-right">
+      <ul class="nav nav-pills">
+        <li class="nav-item pr-2"><a href="html/resume.html" class="nav-link">Resume</a></li>
+        <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+      </ul>
+
+    </header>
     <main>
-        <div class="container">
-            <h1>Hi, I'm Lawrence Liu</h1>  
-            <p>(2x half-marathon finisher)</p>
-            <br/>
-            <p>I am currently a Data Engineer at phData creating Machine Learning pipelines for supply chain forecasting. 
-                I graduated from NYU in 2021 with a degree in Economics. 
-                I gravitated to programming as a hobby and career because it provided an avenue to be creative and solve challenges.</p>
-            <br/>
-            <ul>
-                <li>Epic Systems: creating internal reporting tools for the 3500+ Technical Services Division</li>
-            </ul>
+        <div class="home_page">
+            <div class="container-md home_page_content">
+                <h1>Hi, I'm Lawrence Liu</h1>  
+                <p>(2x half-marathon finisher)</p>
+                <br/>
+                <p>I am currently a Data Engineer at phData creating Machine Learning pipelines for supply chain forecasting. 
+                    I graduated from NYU in 2021 with a degree in Economics. 
+                    I gravitated to programming as a hobby and career because it provides an avenue to be creative and solve challenges.</p>
+                <br/>
+                <ul>
+                    <li>Epic Systems: creating internal reporting tools for the 3500+ Technical Services Division</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container project_page" id="projects">
+            <div class="project_page_content">
+            <h2>Projects</h2>
+            
+            <div class="row">
+
+                <div class="card col-md-4">
+                    <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/184.webp" class="card-img-top" alt="Fissure in Sandstone"/>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#!" class="btn btn-primary">Button</a>
+                    </div>
+                </div>
+
+                <div class="card col-md-4">
+                    <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/184.webp" class="card-img-top" alt="Fissure in Sandstone"/>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#!" class="btn btn-primary">Button</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+
         </div>
     </main>
 	
