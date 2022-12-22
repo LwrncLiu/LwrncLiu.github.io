@@ -1,5 +1,18 @@
+.navbar {
+    padding-right: 0;
+}
 
+.navbar .container-fluid {
+    padding-right: 0;
+}
 
+.navbar-nav { 
+    flex-direction: row;
+}
+
+.nav-item {
+    margin-left: 20px;
+}
 .home_page {
     height: 100vh;
 }
@@ -14,7 +27,7 @@
     transform: translateY(-50%);
 } 
 
-li:not(:last-child) {
+.home_page_content li:not(:last-child) {
     margin-bottom: 5px;
 }
 
