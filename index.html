@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Lawrence Liu</title>
+    
+        <link rel="icon" href="./favicon.ico" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+  <body style="margin-left:5%;margin-right:5%;">
+    
+    <main>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="html/resume.html" class="nav-link">Resume</a></li>
+                    <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                </ul>
+            </div>
+        </nav>
+    
+        <div class="home_page">
+            <div class="home_page_content">
+                <h1>Hi, I'm Lawrence 👋</h1>  
+                <p>(2x half-marathon finisher)</p>
+                <br/>
+                <p>I graduated from 
+                    <b style="color:#540e8d">NYU</b> in 2021 with a degree in Economics. 
+                    I gravitated to programming as a hobby and then a career because it provided an avenue to be creative and solve challenges.</p>
+                <br/>
+                <p>Where I've worked so far:</p>
+                <ul>
+                    <li><b style="color:#2a436a">phData</b>: creating data and machine learning pipelines that serve supply chain forecasts to 2400+ restaurants globally</li>
+                    <li><b style="color:#ba0239">Epic Systems</b>: ingested data and created internal reporting tools for the 3500+ Technical Services Division</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container project_page" id="projects">
+            <div class="project_page_content">
+            <h2>Fun Projects</h2>
+            
+            <div class="row">
+
+                <div class="card col-md-3">
+                    <img src="./static/bee_hives.PNG" class="card-img-top" alt="Hexagons and Bees"/>
+                    <div class="card-body">
+                        <h5 class="card-title">NFL Bee Hives</h5>
+                        <p class="card-text">A non-traditional visualization of the 2021-22 NFL season.</p>
+                        <div>
+                            <div class="pill" id="javascript">Javascript</div>
+                            <div class="pill" id="d3">D3.js</div>
+                            <div class="pill" id="html_css">HTML/CSS</div>
+                        </div>
+                        <a href="https://lwrncliu.github.io/nfl_honeycombs/" class="btn btn-dark" target="_blank">Check it Out!</a>
+                    </div>
+                </div>
+
+                <div class="card col-md-3">
+                    <img src="./static/shot_chart.PNG" class="card-img-top" alt="3D NBA Shot Charts"/>
+                    <div class="card-body">
+                        <h5 class="card-title">3D NBA Shot Charts</h5>
+                        <p class="card-text">NBA Shot Charts with guesstimate ball flight trajectories in 3D space.</p>
+                        <div>
+                            <div class="pill" id="python">Python</div>
+                            <div class="pill" id="sql">SQL</div>
+                            <div class="pill" id="dash">Dash</div>
+                            <div class="pill" id="gcp">GCP</div>
+                        </div>
+                        <a class="btn btn-light">Currently Down :(</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+        </div>
+    </main>
+	
+  </body>
+</html>
+
+<!-- # Import necessary libraries
+from dash import html, dcc
+import dash_bootstrap_components as dbc
+
+nav_bar = html.Div([
+    dbc.NavbarSimple(
+        children=[
+            dbc.NavItem(html.A("Projects", href='#projects', className='custom-nav-link')),
+            dbc.NavItem(html.A("Resume", href='/resume', className='custom-nav-link')),
+        ],
+        color="white"
+    )
+])
+
+former_experiences = [
+    html.P([
+        html.A(
+            html.B('Epic Systems', className='epic-color'),
+            href="https://www.epic.com/", target="_blank"),
+        ': creating internal reporting tools for the 3500+ Technical Services Division'
+    ])
+]
+
+home_section = html.Div(
+    [
+        dbc.Row([
+            nav_bar
+        ]),
+        dbc.Row([
+            dbc.Col([
+                html.H1("Hi, I'm Lawrence Liu"),
+                html.Div(
+                    html.P('(2x half-marathon finisher)'),
+                    id='marathon-tooltip-target'
+                ),
+                html.P([
+                        html.Br(),
+                        'I am currently a Data Engineer at ',
+                        html.A(html.B('phData', className='phdata-color'), href="https://www.phdata.io/", target="_blank"),
+                        ' creating Machine Learning pipelines for supply chain forecasting. ',
+                        'I graduated from ',
+                        html.B('NYU', className='nyu-color'),
+                        ' in 2021 with a degree in Economics and found a passion for coding soon after entering the workforce.',
+                        html.Br(),
+                        html.Br(),
+                        'My former experience includes:'
+                ]),
+                html.Ul(id='experience-list',
+                        children=[html.Li(i) for i in former_experiences]),
+                dbc.Tooltip(
+                    "Brooklyn Half on October 19th, 2019 and Madison Half on November 13th, 2022 (🤞)",
+                    target="marathon-tooltip-target",
+                    placement='right'
+                ),
+            ])
+        ],
+        className='landing-page-text'
+        ),
+
+    ],
+)
+
+shot_chart_card = dbc.Card(
+    [
+        dbc.CardImg(src='/static/images/shot_chart.PNG', top=True),
+        dbc.CardBody([
+            html.H4('3D Shot Charts', className='card-title'),
+            html.P(
+                "Traditional shot charts are two-dimensional. "
+                "I processed 21 years of data and re-learned the quadratic equation to add a third dimension."
+            ),
+            html.Div([
+                html.Div('Python', className='pill', style={'backgroundColor': '#fff7e1', 'color': '#ffd241'}),
+                html.Div('Dash', className='pill', style={'backgroundColor': '#ebedf1', 'color': '#3f4f75'}),
+                html.Div('GCP', className='pill', style={'backgroundColor': '#9cbcf4', 'color': '#4485f4'})
+            ]),
+            dbc.Button('Check it out', color='secondary', href="/shot_chart", className='project-button')
+        ])
+    ]
+)
+
+project_section = html.Div([
+    dbc.Row([
+        html.H3('My Project(s)', className='project-title')
+        ]),
+    dbc.Row([
+        dbc.Col([
+            shot_chart_card
+            ], width=4)
+        ], className='project-cards', id='projects')
+    ])
+
+layout = html.Div(
+    dbc.Container([
+        html.Div(
+            home_section, style={'height': '100vh'}, className='landing-page'
+        ),
+        html.Div(
+            project_section, style={'height': '100vh'}, className='project-page'
+        )
+    ])
+) -->
