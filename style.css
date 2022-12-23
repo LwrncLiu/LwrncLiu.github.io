@@ -63,7 +63,11 @@
 }
 
 .card-body .btn {
-    margin-top: 10px;
+    margin-top: 20px;
+}
+
+.pills {
+    margin-bottom: 1rem;
 }
 
 .pill {
