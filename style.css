@@ -66,6 +66,10 @@
     margin-top: 20px;
 }
 
+.pills {
+    margin-bottom: 1rem;
+}
+
 .pill {
     border-radius: 4px;
     margin: 0 4px 4px 0;
