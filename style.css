@@ -52,12 +52,8 @@
     margin: auto;
 }
 
-.card {
-    margin-right: 10px; 
-    margin-left: 10px;
-    margin-top: 20px;
-    padding-left: 0px;
-    padding-right: 0px;
+.col-md-4 {
+    margin-top: 10px;
 }
 
 .card-img-top {
